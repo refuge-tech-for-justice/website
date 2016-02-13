@@ -133,3 +133,7 @@ p{
       color: #4CAF50;
   }
 
+.info {
+    font-size: 80%;
+    text-align: center;
+}

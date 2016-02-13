@@ -1,9 +1,14 @@
 var dataBase=new Firebase("https://refuge.firebaseio.com/");
 var data=null;
-var map, heatmap;
-var defaultzoom = 4;
+var map;
+var defaultzoom = 6;
 var defaultcentre = new google.maps.LatLng(39.404989, 22.349621);
-var booths_loaded = false;
+var infoWindow, manager;
+var latLng=null;
+var d={};
+$.getJSON("data.json",function(locs){
+    latLng=locs;
+});
 
 
 dataBase.on("value", function(snapshot) {
@@ -27,7 +32,7 @@ $(document).ready(function(){
       window.location.hash = hash;
     });
   });
-<<<<<<< HEAD
+
 });
 
 
@@ -42,27 +47,83 @@ function initialize() {
       mapOptions);
 	  
   manager = new MarkerManager(map);
-  infowindow = new google.maps.InfoWindow({ content: "holding..."});
+  infoWindow = new google.maps.InfoWindow({ content: "holding..."});
+  google.maps.event.addListener(map, 'zoom_changed', displayMarkers);
 }
 
 function graphMap(t){
-    var d={};
+    var max=0;
     for(i in data['data']['reqs']){
         if (data['data']['reqs'][i]['type']==t){
             var location=data['data']['reqs'][i]['loc'];
-            console.log(location);
             if (location in d){
                 d[location]+=1;
+                if (max<d[location]){
+                    max=d[location];
+                }
             }
             else{
                 d[location]=1;
             }
         }
     }
+    var gradient = [
+    'rgba(0, 255, 255, 0)',
+    'rgba(0, 255, 255, 1)',
+    'rgba(0, 127, 255, 1)',
+    'rgba(0, 63, 255, 1)',
+    'rgba(0, 0, 255, 1)',
+    'rgba(0, 0, 191, 1)',
+    'rgba(0, 0, 159, 1)',
+    'rgba(0, 0, 127, 1)',
+    'rgba(127, 0, 63, 1)',
+    'rgba(191, 0, 31, 1)',
+    'rgba(255, 0, 0, 1)'
+  ];
+    var individualLocs=[];
+    for(i in d){
+        var l = {location: new google.maps.LatLng(latLng[i][0], latLng[i][1]), weight: d[i]};
+        individualLocs.push(l);
+    }
+    var heat= new google.maps.visualization.HeatmapLayer({
+	   data: individualLocs ,
+       opactity: 0.9,
+	   maxIntensity: max,
+	   radius: 20,
+	   gradient: gradient,
+	   dissipating: true 
+	});
     
+    heat.setMap(map);
     
 }
-=======
+
+function displayMarkers(){
+    if (map.getZoom()>8){
+        for(i in d){
+            var whtml =  "<div class='info'><h3>"+ i + "</h3><h4>" + d[i] +" request(s)</h4></div>";
+            var marker = new google.maps.Marker({
+                position: new google.maps.LatLng(latLng[i][0], latLng[i][1]),
+                title : i,
+                html : whtml
+				    });
+            google.maps.event.addListener(marker, 'click', function(){
+                infoWindow.setContent(this.html);
+				infoWindow.open(map, this);
+            });
+            manager.addMarker(marker,0);
+        }
+         manager.refresh();    
+    }
+    else{
+        manager.clearMarkers();
+    }
+    
+}
+    
+
+
+
     $(window).load(function() {
     $(".slideanim").each(function(){
       var pos = $(this).offset().top;
@@ -72,11 +133,11 @@ function graphMap(t){
           $(this).addClass("slide");
         }
     });
-  });
+  
  
 
     $('#tagline').hide();
     $('#tagline').fadeIn('slow');
 
 });
->>>>>>> 8e45ac19483ace35463201338a1b77591d5d6691
+
