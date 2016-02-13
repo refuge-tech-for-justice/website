@@ -19,8 +19,12 @@ h2 {
 #about {
     font-size: 120%;
     margin-top: -5%;
+    width: 90%;
 }
 
+#about h2{
+    text-align: center;
+}
 
 .navbar li a, .navbar .navbar-brand {
       color:  #4CAF50 !important;
@@ -127,7 +131,7 @@ p{
     }
   }
 
-  .navbar-nav li a:hover {
+.navbar-nav li a:hover {
       color: #673AB7 !important;
   }
 .navbar-nav li.active a{
@@ -143,7 +147,6 @@ p{
       margin-bottom: 20px;
       color: #4CAF50;
       position: absolute;
-      top: 320%;
   }
 
 #map{
@@ -154,13 +157,12 @@ p{
 }
 
 .buttons{
-    height: 30%;
-    width: 30%;
-    padding-right: 10%;
-    padding-bottom: 10%;
-    margin-top: -5%;
+    height: 100px;
+    width: 100px;
    
 }
+
 #suppliesDiv{
-    padding-left:300% !important;
+    width:90%;
+
 }
