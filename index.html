@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title></title>
     <link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+	<link href='https://fonts.googleapis.com/css?family=Poly' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="index.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
     <!-- BootStrap-->
@@ -16,6 +17,7 @@
     <script src="https://cdn.firebase.com/js/client/2.4.0/firebase.js"></script>    
     <!-- AngularFire -->
     <script src="https://cdn.firebase.com/libs/angularfire/1.1.3/angularfire.min.js"></script>
+
     
 </head>
 
@@ -28,7 +30,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>                        
       </button>
-      <a class="tab navbar-brand" href="#myPage">CentRefuge</a>
+      <a id="logo"  class="tab navbar-brand" href="#myPage">CentRefuge</a>
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav navbar-right">
@@ -40,12 +42,21 @@
     </div>
   </div>
 </nav>
+<div id="home" class="container-fluid text-center">
+   <div>
+    <h1 id="startText" class="slideanim">CentRefuge</h1>
+      <span><img class="slideanim" id="icon" src="CRIcon.png"></span>
+    </div>
+    <div >
+      <h2 id="tagline">"From Compassion To Action"</h2><br>
+    </div>
+</div>
     
 <div id="main" class="container-fluid">
   <div class="row">
-    <div class="col-sm-4">
-      <span class="glyphicon glyphicon-globe logo slideanim"></span>
-    </div>
+  <!--  <div class="col-sm-4">
+      <span><img id="icon" src="CRIcon4.png"></span>
+    </div>-->
     <div class="col-sm-8">
       <h2>CentRefuge: From Compassion To Action</h2><br>
         <p>
@@ -67,7 +78,31 @@
     </div>
   </div>
 </div>
-
+<!-- Container (Services Section) -->
+<div id="services" class="container-fluid text-center">
+  <h2>MAP</h2>
+  <h4>The map of needs</h4>
+  <br>
+    <div >
+      <h2>"From Compassion To Action"</h2><br>
+        <p>
+            CentRefuge provides a technical solution to the current refugee crisis. Unlike many other platforms, CentRefuge 
+            allows refugees to communicate their basic needs and also invites volunteers to respond to those in need. Our project 
+            is threefold: a SMS system, an Android application, and a web applcation. 
+        </p>
+        <p>
+            The SMS system allows refugees to request food, water, or shelter through texts. By texting +1-(256)-515-4199, they can
+            easily convey their needs to the public. The SMS system will collect all the requests, and...
+        </p>
+        <p>
+            The Android application retrieves the requests from our databases and notifies nearby users if someone is in need.
+        </p>
+        <p>
+            The web application populates and visualizes the requests from the refugees. Authorities can use the site to determine 
+            locations where reponse is needed.
+        </p>
+    </div>
+</div>
 <div id="map" class="container-fluid  bg-grey">
   <div class="row">
     <div class="col-sm-8">

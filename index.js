@@ -27,6 +27,7 @@ $(document).ready(function(){
       window.location.hash = hash;
     });
   });
+<<<<<<< HEAD
 });
 
 
@@ -61,3 +62,21 @@ function graphMap(t){
     
     
 }
+=======
+    $(window).load(function() {
+    $(".slideanim").each(function(){
+      var pos = $(this).offset().top;
+
+      var winTop = $(window).scrollTop();
+        if (pos < winTop + 600) {
+          $(this).addClass("slide");
+        }
+    });
+  });
+ 
+
+    $('#tagline').hide();
+    $('#tagline').fadeIn('slow');
+
+});
+>>>>>>> 8e45ac19483ace35463201338a1b77591d5d6691

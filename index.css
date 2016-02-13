@@ -17,10 +17,7 @@ h2 {
 }
 
 #main {
-    padding-top: 13%;
     font-size: 120%;
-    padding-bottom: 9%;
-
 }
 
 .navbar li a, .navbar .navbar-brand {
@@ -29,7 +26,7 @@ h2 {
 
 h2 {
     font-size: 24px;
-    text-transform: uppercase;
+    /*text-transform: uppercase;*/
     color:  #4CAF50 !important;
 }
 
@@ -45,6 +42,7 @@ body {
     font-size: 120% !important;
 
 }
+
 #map {
     display:block;
     position:absolute;
@@ -55,3 +53,83 @@ body {
     right:0;
     margin-top:50px; 
 }
+
+
+.container-fluid{
+    padding-top: 8%;
+    padding-bottom: 9%;
+    
+}
+#logo{
+    font-family:'Poly', serif !important;
+    font-size: 200% !important;
+    margin-left: 10%;
+    text-align: center;
+}
+
+#startText{
+     font-family:'Poly', serif !important;
+    font-size: 400% !important;
+     color:  #4CAF50 !important;
+}
+
+#icon{
+    /*margin-left: 20%;*/
+    width: 30%;
+    height: 30%;
+}
+
+p{
+    font-size: 150%;
+}
+
+#tagline{
+    font-style: italic;
+}
+
+.slideanim {visibility:hidden;}
+  .slide {
+      animation-name: slide;
+      -webkit-animation-name: slide;	
+      animation-duration: 1s;	
+      -webkit-animation-duration: 1s;
+      visibility: visible;			
+  }
+  @keyframes slide {
+    0% {
+      opacity: 0;
+      -webkit-transform: translateY(70%);
+    } 
+    100% {
+      opacity: 1;
+      -webkit-transform: translateY(0%);
+    }	
+  }
+  @-webkit-keyframes slide {
+    0% {
+      opacity: 0;
+      -webkit-transform: translateY(70%);
+    } 
+    100% {
+      opacity: 1;
+      -webkit-transform: translateY(0%);
+    }
+  }
+
+  .navbar-nav li a:hover {
+      color: #673AB7 !important;
+  }
+.navbar-nav li.active a{
+    color: #673AB7 !important;
+    
+}
+  .navbar-default .navbar-toggle {
+      border-color: transparent;
+      color: #673AB7 !important;
+  }
+  footer .glyphicon {
+      font-size: 20px;
+      margin-bottom: 20px;
+      color: #4CAF50;
+  }
+
