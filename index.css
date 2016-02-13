@@ -1,0 +1,15 @@
+.navbar {
+    border-radius: 0px !important;
+    background-color: white !important;
+    margin-bottom: 0px !important;
+}
+
+.navbar a {
+    color: #575757 !important;
+}
+
+
+#main {
+    margin: 0 auto;
+    font-size: 120%;
+}
