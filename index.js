@@ -32,22 +32,7 @@ $(document).ready(function(){
       window.location.hash = hash;
     });
   });
-
-$(window).load(function() {
-    $(".slideanim").each(function(){
-      var pos = $(this).offset().top;
-
-      var winTop = $(window).scrollTop();
-        if (pos < winTop + 600) {
-          $(this).addClass("slide");
-        }
-    });
-  });
- 
-
-    $('#tagline').hide();
-    $('#tagline').fadeIn('slow');
-	initialize();
+})
 
 
 function initialize() {
@@ -96,6 +81,7 @@ function graphMap(t){
   ];
     var individualLocs=[];
     for(i in d){
+        console.log(i);
         var l = {location: new google.maps.LatLng(latLng[i][0], latLng[i][1]), weight: d[i]};
         individualLocs.push(l);
     }
@@ -109,7 +95,7 @@ function graphMap(t){
 	});
     
     heat.setMap(map);
-    
+    displayMarkers();
 }
 
 
@@ -150,10 +136,16 @@ function displayMarkers(){
     });
   
  
-
     $('#tagline').hide();
     $('#tagline').fadeIn('slow');
 
 });
 
+google.maps.event.addDomListener(window, 'load', initialize);
 
+$('#waterIcon').click(function(){
+    graphMap('water')});
+$('#foodIcon').click(function(){
+    graphMap('food')});
+$('#shelterIcon').click(function(){
+    graphMap('shelter')});
