@@ -1,6 +1,7 @@
 var dataBase=new Firebase("https://refuge.firebaseio.com/");
 var data=null;
 var map;
+var heat;
 var defaultzoom = 6;
 var defaultcentre = new google.maps.LatLng(39.404989, 22.349621);
 var infoWindow, manager;
@@ -51,6 +52,7 @@ function initialize() {
 }
 
 function graphMap(t){
+    d={};
     var max=0;
     for(i in data['data']['reqs']){
         if (data['data']['reqs'][i]['type']==t){
@@ -89,7 +91,10 @@ function graphMap(t){
         }
         
     }
-    var heat= new google.maps.visualization.HeatmapLayer({
+    if(heat!=null){
+        heat.setMap(null);
+    }
+    heat= new google.maps.visualization.HeatmapLayer({
 	   data: individualLocs ,
        opactity: 0.9,
 	   maxIntensity: max,
