@@ -19,7 +19,7 @@ dataBase.on("value", function(snapshot) {
 
 
 $(document).ready(function(){
-  $(".navbar a, footer a[href='#main']").on('click', function(event) {
+  $(".navbar a, footer a[href='#home']").on('click', function(event) {
     var hash = this.hash;
 
     // Using jQuery's animate() method to add smooth page scroll
