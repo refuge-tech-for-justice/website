@@ -8,15 +8,18 @@
       background-color: #f6f6f6;
   }
 
-
+h2 {
+    font-family: Lato !important;
+    font-weight: 200;
+}
 #icon img {
     height: 35px;
 }
 
 #main {
-    margin-top: 150px;
+    padding-top: 13%;
     font-size: 120%;
-    margin-bottom: 100px;
+    padding-bottom: 9%;
 
 }
 
