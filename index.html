@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title></title>
+    <link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="index.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
     <!-- BootStrap-->
@@ -20,7 +21,7 @@
 
 <body>
 
-		<nav class="navbar navbar-default navbar-fixed-top">
+<nav class="navbar navbar-default navbar-fixed-top">
   <div class="container">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
@@ -28,21 +29,25 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>                        
       </button>
-      <a class="navbar-brand" href="#myPage">HOME</a>
+      <a class="tab navbar-brand" href="#myPage">CentRefuge</a>
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="#about">About</a></li>
-        <li><a href="#portfolio">Map</a></li>
-        <li><a href="#pricing">Statistics</a></li>
-		<li><a href="#">Contact Us</a></li>  
+        <li><a class="tab" href="#main">About</a></li>
+        <li><a class="tab" href="#map">Map</a></li>
+        <li><a class="tab" href="#stats">Statistics</a></li>
+		<li><a class="tab" href="#contact">Contact Us</a></li>  
       </ul>
     </div>
   </div>
 </nav>
-
-    <div id="main">
-        <h1>CentRefuge: From Compassion To Action</h1>
+<div id="main" class="container-fluid">
+  <div class="row">
+    <div class="col-sm-4">
+      <span class="glyphicon glyphicon-globe logo slideanim"></span>
+    </div>
+    <div class="col-sm-8">
+      <h2>CentRefuge: From Compassion To Action</h2><br>
         <p>
             CentRefuge provides a technical solution to the current refugee crisis. Unlike many other platforms, CentRefuge 
             allows refugees to communicate their basic needs and also invites volunteers to respond to those in need. Our project 
@@ -60,6 +65,88 @@
             locations where reponse is needed.
         </p>
     </div>
+  </div>
+</div>
+
+<div id="map" class="container-fluid  bg-grey">
+  <div class="row">
+    <div class="col-sm-8">
+      <h2>CentRefuge: From Compassion To Action</h2><br>
+        <p>
+            CentRefuge provides a technical solution to the current refugee crisis. Unlike many other platforms, CentRefuge 
+            allows refugees to communicate their basic needs and also invites volunteers to respond to those in need. Our project 
+            is threefold: a SMS system, an Android application, and a web applcation. 
+        </p>
+        <p>
+            The SMS system allows refugees to request food, water, or shelter through texts. By texting +1-(256)-515-4199, they can
+            easily convey their needs to the public. The SMS system will collect all the requests, and...
+        </p>
+        <p>
+            The Android application retrieves the requests from our databases and notifies nearby users if someone is in need.
+        </p>
+        <p>
+            The web application populates and visualizes the requests from the refugees. Authorities can use the site to determine 
+            locations where reponse is needed.
+        </p>
+    </div>
+  </div>
+</div>
+
+<div id="stats" class="container-fluid">
+  <div class="row">
+    <div class="col-sm-8">
+      <h2>CentRefuge: From Compassion To Action</h2><br>
+        <p>
+            CentRefuge provides a technical solution to the current refugee crisis. Unlike many other platforms, CentRefuge 
+            allows refugees to communicate their basic needs and also invites volunteers to respond to those in need. Our project 
+            is threefold: a SMS system, an Android application, and a web applcation. 
+        </p>
+        <p>
+            The SMS system allows refugees to request food, water, or shelter through texts. By texting +1-(256)-515-4199, they can
+            easily convey their needs to the public. The SMS system will collect all the requests, and...
+        </p>
+        <p>
+            The Android application retrieves the requests from our databases and notifies nearby users if someone is in need.
+        </p>
+        <p>
+            The web application populates and visualizes the requests from the refugees. Authorities can use the site to determine 
+            locations where reponse is needed.
+        </p>
+    </div>
+  </div>
+</div>
+
+<div id="contact" class="container-fluid  bg-grey">
+  <div class="row">
+    <div class="col-sm-8">
+      <h2>CentRefuge: From Compassion To Action</h2><br>
+        <p>
+            CentRefuge provides a technical solution to the current refugee crisis. Unlike many other platforms, CentRefuge 
+            allows refugees to communicate their basic needs and also invites volunteers to respond to those in need. Our project 
+            is threefold: a SMS system, an Android application, and a web applcation. 
+        </p>
+        <p>
+            The SMS system allows refugees to request food, water, or shelter through texts. By texting +1-(256)-515-4199, they can
+            easily convey their needs to the public. The SMS system will collect all the requests, and...
+        </p>
+        <p>
+            The Android application retrieves the requests from our databases and notifies nearby users if someone is in need.
+        </p>
+        <p>
+            The web application populates and visualizes the requests from the refugees. Authorities can use the site to determine 
+            locations where reponse is needed.
+        </p>
+    </div>
+  </div>
+</div>
+    
+<footer class="container-fluid text-center">
+  <a href="#main" title="To Top">
+    <span class="glyphicon glyphicon-chevron-up"></span>
+  </a>
+</footer>
+
+
     <script src="index.js"></script>
 </body>
 </html>

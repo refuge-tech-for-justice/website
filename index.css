@@ -1,18 +1,45 @@
 .navbar {
     border-radius: 0px !important;
     background-color: white !important;
-    margin-bottom: 0px !important;
+    padding: 15px !important
 }
 
-.navbar a {
-    color: #575757 !important;
-}
+ .bg-grey {
+      background-color: #f6f6f6;
+  }
+
 
 #icon img {
     height: 35px;
 }
 
 #main {
-    margin: 0 auto;
+    margin-top: 150px;
     font-size: 120%;
+    margin-bottom: 100px;
+
 }
+
+.navbar li a, .navbar .navbar-brand {
+      color:  #4CAF50 !important;
+}
+
+h2 {
+    font-size: 24px;
+    text-transform: uppercase;
+    color:  #4CAF50 !important;
+}
+
+body {  
+    line-height: 1.8;
+    color:  grey !important;
+} 
+
+.tab {
+    letter-spacing: 5px !important;
+    padding-left: 20px !important;
+    font-weight: 400;
+    font-size: 120% !important;
+
+}
+
