@@ -8,6 +8,9 @@
     color: #575757 !important;
 }
 
+#icon img {
+    height: 35px;
+}
 
 #main {
     margin: 0 auto;
