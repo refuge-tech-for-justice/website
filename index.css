@@ -14,10 +14,7 @@
 }
 
 #main {
-    margin-top: 150px;
     font-size: 120%;
-    margin-bottom: 100px;
-
 }
 
 .navbar li a, .navbar .navbar-brand {
@@ -43,3 +40,8 @@ body {
 
 }
 
+.container-fluid{
+    padding-top: 13%;
+    padding-bottom: 9%;
+    
+}
