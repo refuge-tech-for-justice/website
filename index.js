@@ -104,7 +104,7 @@ function graphMap(t){
 
 
 function displayMarkers(){
-    if (map.getZoom()>8){
+    if (map.getZoom()>10){
         for(i in d){
             try {
                 var whtml =  "<div class='info'><h3>"+ i + "</h3><h4>" + d[i] +" request(s)</h4></div>";
