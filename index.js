@@ -81,9 +81,13 @@ function graphMap(t){
   ];
     var individualLocs=[];
     for(i in d){
-        console.log(i);
-        var l = {location: new google.maps.LatLng(latLng[i][0], latLng[i][1]), weight: d[i]};
-        individualLocs.push(l);
+        try {
+            var l = {location: new google.maps.LatLng(latLng[i][0], latLng[i][1]), weight: d[i]};
+            individualLocs.push(l);
+        }
+        catch(err){
+        }
+        
     }
     var heat= new google.maps.visualization.HeatmapLayer({
 	   data: individualLocs ,
@@ -102,17 +106,21 @@ function graphMap(t){
 function displayMarkers(){
     if (map.getZoom()>8){
         for(i in d){
-            var whtml =  "<div class='info'><h3>"+ i + "</h3><h4>" + d[i] +" request(s)</h4></div>";
-            var marker = new google.maps.Marker({
-                position: new google.maps.LatLng(latLng[i][0], latLng[i][1]),
-                title : i,
-                html : whtml
-				    });
-            google.maps.event.addListener(marker, 'click', function(){
-                infoWindow.setContent(this.html);
-				infoWindow.open(map, this);
-            });
-            manager.addMarker(marker,0);
+            try {
+                var whtml =  "<div class='info'><h3>"+ i + "</h3><h4>" + d[i] +" request(s)</h4></div>";
+                var marker = new google.maps.Marker({
+                    position: new google.maps.LatLng(latLng[i][0], latLng[i][1]),
+                    title : i,
+                    html : whtml
+                        });
+                google.maps.event.addListener(marker, 'click', function(){
+                    infoWindow.setContent(this.html);
+                    infoWindow.open(map, this);
+                });
+                manager.addMarker(marker,0);
+            }
+            catch(err){
+            }
         }
          manager.refresh();    
     }
