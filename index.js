@@ -8,13 +8,7 @@ data.on("value", function(snapshot) {
 
 
 $(document).ready(function(){
-  // Add smooth scrolling to all links in navbar + footer link
   $(".navbar a, footer a[href='#main']").on('click', function(event) {
-
-    // Prevent default anchor click behavior
-    event.preventDefault();
-
-    // Store hash
     var hash = this.hash;
 
     // Using jQuery's animate() method to add smooth page scroll
