@@ -146,17 +146,17 @@ p{
 #map{
     height:75%;
     position: absolute;
-    top: 170%;
     margin-top:10%;
 }
 
 .buttons{
-    height: 100px;
-    width: 100px;
+    height: 150px;
+    width: 150px;
    
 }
 
-#suppliesDiv{
-    width:90%;
 
+#suppliesDiv{
+    width:95%;
+    margin-left:30%;
 }
