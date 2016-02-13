@@ -18,7 +18,7 @@ h2 {
 
 #about {
     font-size: 120%;
-    margin-top: -5%;
+    margin-top: 5%;
     width: 90%;
 }
 
@@ -50,6 +50,7 @@ body {
 }
 
 #map{
+    margin-bottom:10%;
     width:100%;
     
 }
@@ -147,16 +148,24 @@ p{
     height:75%;
     position: absolute;
     margin-top:10%;
+    padding-bottom: 10%;
 }
 
 .buttons{
     height: 150px;
     width: 150px;
-   
+   padding-left: 10px;
 }
 
 
 #suppliesDiv{
     width:95%;
-    margin-left:30%;
+    margin-left:25%;
+}
+.suppliesSpan{
+    padding-right:5%;
+}
+
+#mapTitle{
+    margin-top:10%;
 }
