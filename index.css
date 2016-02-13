@@ -18,9 +18,6 @@ h2 {
 
 #main {
     font-size: 120%;
-    padding-top: 13%;
-    padding-bottom: 9%;
-
 }
 
 .navbar li a, .navbar .navbar-brand {
@@ -47,7 +44,7 @@ body {
 }
 
 .container-fluid{
-    padding-top: 13%;
+    padding-top: 8%;
     padding-bottom: 9%;
     
 }
@@ -77,3 +74,49 @@ p{
 #tagline{
     font-style: italic;
 }
+
+.slideanim {visibility:hidden;}
+  .slide {
+      animation-name: slide;
+      -webkit-animation-name: slide;	
+      animation-duration: 1s;	
+      -webkit-animation-duration: 1s;
+      visibility: visible;			
+  }
+  @keyframes slide {
+    0% {
+      opacity: 0;
+      -webkit-transform: translateY(70%);
+    } 
+    100% {
+      opacity: 1;
+      -webkit-transform: translateY(0%);
+    }	
+  }
+  @-webkit-keyframes slide {
+    0% {
+      opacity: 0;
+      -webkit-transform: translateY(70%);
+    } 
+    100% {
+      opacity: 1;
+      -webkit-transform: translateY(0%);
+    }
+  }
+
+  .navbar-nav li a:hover {
+      color: #673AB7 !important;
+  }
+.navbar-nav li.active a{
+    color: #673AB7 !important;
+    
+}
+  .navbar-default .navbar-toggle {
+      border-color: transparent;
+      color: #673AB7 !important;
+  }
+  footer .glyphicon {
+      font-size: 20px;
+      margin-bottom: 20px;
+      color: #4CAF50;
+  }

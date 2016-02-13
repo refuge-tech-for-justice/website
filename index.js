@@ -27,7 +27,19 @@ $(document).ready(function(){
       window.location.hash = hash;
     });
   });
-  
+    $(window).load(function() {
+    $(".slideanim").each(function(){
+      var pos = $(this).offset().top;
+
+      var winTop = $(window).scrollTop();
+        if (pos < winTop + 600) {
+          $(this).addClass("slide");
+        }
+    });
+  });
  
-  
+
+    $('#tagline').hide();
+    $('#tagline').fadeIn('slow');
+
 });
