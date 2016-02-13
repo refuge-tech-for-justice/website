@@ -33,14 +33,28 @@ $(document).ready(function(){
     });
   });
 
-});
+$(window).load(function() {
+    $(".slideanim").each(function(){
+      var pos = $(this).offset().top;
 
+      var winTop = $(window).scrollTop();
+        if (pos < winTop + 600) {
+          $(this).addClass("slide");
+        }
+    });
+  });
+ 
+
+    $('#tagline').hide();
+    $('#tagline').fadeIn('slow');
+	initialize();
 
 
 function initialize() {
   var mapOptions = {
     zoom: defaultzoom,
     center: defaultcentre,
+	scrollwheel:false,
     mapTypeId: google.maps.MapTypeId.ROADMAP
   };
   map = new google.maps.Map(document.getElementById('map'),
@@ -98,6 +112,7 @@ function graphMap(t){
     
 }
 
+
 function displayMarkers(){
     if (map.getZoom()>8){
         for(i in d){
@@ -140,4 +155,5 @@ function displayMarkers(){
     $('#tagline').fadeIn('slow');
 
 });
+
 

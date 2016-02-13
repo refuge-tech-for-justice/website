@@ -16,8 +16,14 @@ h2 {
     height: 35px;
 }
 
-#main {
+#about {
     font-size: 120%;
+    margin-top: -5%;
+    width: 90%;
+}
+
+#about h2{
+    text-align: center;
 }
 
 .navbar li a, .navbar .navbar-brand {
@@ -43,22 +49,20 @@ body {
 
 }
 
-#map {
-    display:block;
-    position:absolute;
-    height:auto;
-    bottom:0;
-    top:0;
-    left:0;
-    right:0;
-    margin-top:50px; 
+#map{
+    width:100%;
+    
 }
 
 
 .container-fluid{
     padding-top: 8%;
-    padding-bottom: 9%;
+    /*padding-bottom: 9%;*/
     
+}
+#stats{
+    position: absolute;
+    top: 250%;
 }
 #logo{
     font-family:'Poly', serif !important;
@@ -116,7 +120,7 @@ p{
     }
   }
 
-  .navbar-nav li a:hover {
+.navbar-nav li a:hover {
       color: #673AB7 !important;
   }
 .navbar-nav li.active a{
@@ -131,9 +135,28 @@ p{
       font-size: 20px;
       margin-bottom: 20px;
       color: #4CAF50;
+      position: absolute;
   }
 
 .info {
     font-size: 80%;
     text-align: center;
+}
+
+#map{
+    height:75%;
+    position: absolute;
+    top: 170%;
+    margin-top:10%;
+}
+
+.buttons{
+    height: 100px;
+    width: 100px;
+   
+}
+
+#suppliesDiv{
+    width:90%;
+
 }
